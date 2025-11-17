@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Frente</title>
+<script>
+function updateTime(){
+  const now = new Date();
+  document.getElementById('time').innerText =
+    now.toLocaleDateString() + " — " + now.toLocaleTimeString();
+}
+</script>
+</head>
+<body onload="updateTime()">
+<div class="topbar">
+  <span class="back" onclick="location.href='page1.html'"><</span>
+  Carteira
+</div>
+
+<div class="tabs">
+  <span class="active">Frente</span>
+  <span onclick="location.href='page3.html'">Verso</span>
+  <span class="disabled">QR Code</span>
+</div>
+
+<img src="images/doc_front.png" class="doc">
+
+<div class="update">Última atualização em: <span id="time"></span></div>
+
+<div class="footer">
+  <div>Carteira</div><div>Serviços</div><div>Opções</div>
+</div>
+</body>
+</html>
